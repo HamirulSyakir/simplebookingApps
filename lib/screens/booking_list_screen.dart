@@ -4,7 +4,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 // String extension to capitalize the first letter of the string
 extension StringExtension on String {
   String capitalize() {
-    if (this.isEmpty) {
+    if (isEmpty) {
       return this;
     }
     return this[0].toUpperCase() + substring(1);
@@ -12,6 +12,8 @@ extension StringExtension on String {
 }
 
 class BookingListScreen extends StatelessWidget {
+  const BookingListScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -81,7 +83,6 @@ class BookingListScreen extends StatelessWidget {
       ),
     );
   }
-
   // Function to update the status of the booking
   void _updateStatus(String id, String status) async {
     await FirebaseFirestore.instance
