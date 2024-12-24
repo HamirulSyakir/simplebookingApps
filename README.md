@@ -1,6 +1,6 @@
 # booking_apps
 
-A new Flutter project.
+A simple Flutter project. Integrating Firestore in booking system
 
 ## Getting Started
 
